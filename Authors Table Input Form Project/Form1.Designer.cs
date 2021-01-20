@@ -45,6 +45,8 @@ namespace Authors_Table_Input_Form_Project
             this.btnAddNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
+            this.hlpAuthors = new System.Windows.Forms.HelpProvider();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -199,11 +201,22 @@ namespace Authors_Table_Input_Form_Project
             this.btnDone.Text = "Do&ne";
             this.btnDone.UseVisualStyleBackColor = true;
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Location = new System.Drawing.Point(333, 212);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(106, 23);
+            this.btnHelp.TabIndex = 14;
+            this.btnHelp.Text = "&Help";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // frmAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 237);
+            this.ClientSize = new System.Drawing.Size(524, 244);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddNew);
@@ -219,7 +232,9 @@ namespace Authors_Table_Input_Form_Project
             this.Controls.Add(this.txtAuthorID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.hlpAuthors.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
             this.Name = "frmAuthors";
+            this.hlpAuthors.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authors";
             this.Load += new System.EventHandler(this.frmAuthors_Load);
@@ -245,6 +260,8 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.HelpProvider hlpAuthors;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
 

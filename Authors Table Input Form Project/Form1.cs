@@ -32,6 +32,7 @@ namespace Authors_Table_Input_Form_Project
         {
             try
             {
+                hlpAuthors.HelpNamespace = Application.StartupPath + "\\authors.chm";
                 booksConnection = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;"
                                                   + "AttachDbFilename=" + Path.GetFullPath("SQLBooksDB.mdf")
                                                   + ";Integrated Security=True;"
@@ -227,6 +228,11 @@ namespace Authors_Table_Input_Form_Project
             {
                 txtYearBorn.Focus();
             }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, hlpAuthors.HelpNamespace);
         }
     }
 }
