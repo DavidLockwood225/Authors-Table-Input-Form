@@ -16,7 +16,7 @@ namespace Authors_Table_Input_Form_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAuthors());
+            Application.Run(new frmPublishers());
         }
     }
 }
