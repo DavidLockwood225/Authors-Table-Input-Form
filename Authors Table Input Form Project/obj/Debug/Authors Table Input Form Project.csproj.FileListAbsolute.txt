@@ -1,0 +1,10 @@
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.exe.config
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.exe
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.pdb
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csprojAssemblyReference.cache
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors_Table_Input_Form_Project.frmAuthors.resources
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors_Table_Input_Form_Project.Properties.Resources.resources
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csproj.GenerateResource.cache
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csproj.CoreCompileInputs.cache
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.exe
+C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Solution\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authors Table Input Form Project", "Authors Table Input Form Project\Authors Table Input Form Project.csproj", "{B7B8E6D4-B232-46FA-86FC-1C5BA096D734}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7B8E6D4-B232-46FA-86FC-1C5BA096D734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B8E6D4-B232-46FA-86FC-1C5BA096D734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B8E6D4-B232-46FA-86FC-1C5BA096D734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B8E6D4-B232-46FA-86FC-1C5BA096D734}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBF24EE2-61E5-402D-8F16-CD5ACC271665}
+	EndGlobalSection
+EndGlobal
