@@ -59,7 +59,7 @@ namespace Authors_Table_Input_Form_Project
             this.txtPubFAX = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPubComments = new System.Windows.Forms.TextBox();
-            this.hlpAuthors = new System.Windows.Forms.HelpProvider();
+            this.hlpPublishers = new System.Windows.Forms.HelpProvider();
             this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -393,9 +393,9 @@ namespace Authors_Table_Input_Form_Project
             this.Controls.Add(this.txtPubID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.hlpAuthors.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.hlpPublishers.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
             this.Name = "frmPublishers";
-            this.hlpAuthors.SetShowHelp(this, true);
+            this.hlpPublishers.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publishers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPublishers_FormClosing);
@@ -436,7 +436,7 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.TextBox txtPubFAX;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPubComments;
-        private System.Windows.Forms.HelpProvider hlpAuthors;
+        private System.Windows.Forms.HelpProvider hlpPublishers;
         private System.Windows.Forms.Button btnHelp;
     }
 }

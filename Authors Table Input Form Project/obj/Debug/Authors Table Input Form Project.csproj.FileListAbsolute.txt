@@ -18,3 +18,13 @@ C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Project\ob
 C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csproj.CoreCompileInputs.cache
 C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.exe
 C:\Users\dlockwood024548\Documents\Chapter 5\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.pdb
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.exe.config
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.exe
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\bin\Debug\Authors Table Input Form Project.pdb
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csprojAssemblyReference.cache
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors_Table_Input_Form_Project.frmPublishers.resources
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors_Table_Input_Form_Project.Properties.Resources.resources
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csproj.GenerateResource.cache
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.csproj.CoreCompileInputs.cache
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.exe
+C:\Users\Dharla\Documents\Authors-Table-Input-Form\Authors Table Input Form Project\obj\Debug\Authors Table Input Form Project.pdb
