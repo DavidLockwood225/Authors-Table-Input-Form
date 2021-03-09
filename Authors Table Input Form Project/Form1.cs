@@ -23,6 +23,8 @@ namespace Authors_Table_Input_Form_Project
         SqlDataAdapter authorsAdapter;
         DataTable authorsTable;
         CurrencyManager authorsManager;
+        string myState;
+        int myBookmark;
         public frmAuthors()
         {
             InitializeComponent();
@@ -58,11 +60,28 @@ namespace Authors_Table_Input_Form_Project
         }
         private void frmAuthors_FormClosing(object sender, FormClosingEventArgs e)
         {
-            booksConnection.Close();
-            booksConnection.Dispose();
-            authorsCommand.Dispose();
-            authorsAdapter.Dispose();
-            authorsTable.Dispose();
+            if (myState.Equals("Edit") || myState.Equals("Add"))
+            {
+                MessageBox.Show("You must finish the current edit before stopping the application.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                try
+                {
+                    SqlCommandBuilder authorsAdapterCommands = new SqlCommandBuilder(authorsAdapter);
+                    authorsAdapter.Update(authorsTable);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving database to file: \r\n" + ex.Message, "Save Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                booksConnection.Close();
+                booksConnection.Dispose();
+                authorsCommand.Dispose();
+                authorsAdapter.Dispose();
+                authorsTable.Dispose();
+            }
         }
         private void btnPrevious_Click(object sender, EventArgs e)
         {
@@ -87,8 +106,14 @@ namespace Authors_Table_Input_Form_Project
             {
                 return;
             }
+            string savedName = txtAuthorName.Text;
+            int savedRow;
             try
             {
+                authorsManager.EndCurrentEdit();
+                authorsTable.DefaultView.Sort = "Author";
+                savedRow = authorsTable.DefaultView.Find(savedName);
+                authorsManager.Position = savedRow;
                 MessageBox.Show("Record saved.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SetState("View");
             }
@@ -108,6 +133,7 @@ namespace Authors_Table_Input_Form_Project
             }
             try
             {
+                authorsManager.RemoveAt(authorsManager.Position);
             }
             catch (Exception ex)
             {
@@ -117,6 +143,8 @@ namespace Authors_Table_Input_Form_Project
 
         private void SetState(string appState)
         {
+            myState = appState;
+
             switch (appState)
             {
                 case "View":
@@ -124,7 +152,10 @@ namespace Authors_Table_Input_Form_Project
                     txtAuthorID.ForeColor = Color.Black;
                     txtAuthorName.ReadOnly = true;
                     txtYearBorn.ReadOnly = true;
+                    btnPrevious.Enabled = true;
                     btnNext.Enabled = true;
+                    btnFirst.Enabled = true;
+                    btnLast.Enabled = true;
                     btnAddNew.Enabled = true;
                     btnSave.Enabled = false;
                     btnCancel.Enabled = false;
@@ -140,6 +171,8 @@ namespace Authors_Table_Input_Form_Project
                     txtYearBorn.ReadOnly = false;
                     btnPrevious.Enabled = false;
                     btnNext.Enabled = false;
+                    btnFirst.Enabled = false;
+                    btnLast.Enabled = false;
                     btnAddNew.Enabled = false;
                     btnSave.Enabled = true;
                     btnCancel.Enabled = true;
@@ -155,6 +188,8 @@ namespace Authors_Table_Input_Form_Project
         {
             try
             {
+                myBookmark = authorsManager.Position;
+                authorsManager.AddNew();
                 SetState("Add");
             }
             catch (Exception ex)
@@ -170,6 +205,11 @@ namespace Authors_Table_Input_Form_Project
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            authorsManager.CancelCurrentEdit();
+            if (myState.Equals("Add"))
+            {
+                authorsManager.Position = myBookmark;
+            }
             SetState("View");
         }
 
@@ -233,6 +273,21 @@ namespace Authors_Table_Input_Form_Project
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, hlpAuthors.HelpNamespace);
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            authorsManager.Position = 0;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            authorsManager.Position = authorsManager.Count - 1;
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

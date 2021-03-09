@@ -47,6 +47,8 @@ namespace Authors_Table_Input_Form_Project
             this.btnDone = new System.Windows.Forms.Button();
             this.hlpAuthors = new System.Windows.Forms.HelpProvider();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.btnFirst = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -116,9 +118,9 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(142, 125);
+            this.btnPrevious.Location = new System.Drawing.Point(167, 125);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(106, 23);
+            this.btnPrevious.Size = new System.Drawing.Size(93, 23);
             this.btnPrevious.TabIndex = 6;
             this.btnPrevious.TabStop = false;
             this.btnPrevious.Text = "<= Previous";
@@ -127,9 +129,9 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(275, 125);
+            this.btnNext.Location = new System.Drawing.Point(266, 125);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(106, 23);
+            this.btnNext.Size = new System.Drawing.Size(93, 23);
             this.btnNext.TabIndex = 7;
             this.btnNext.TabStop = false;
             this.btnNext.Text = "Next =>";
@@ -138,7 +140,7 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(82, 154);
+            this.btnEdit.Location = new System.Drawing.Point(93, 154);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(106, 23);
             this.btnEdit.TabIndex = 8;
@@ -160,7 +162,7 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(333, 154);
+            this.btnCancel.Location = new System.Drawing.Point(317, 154);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 23);
             this.btnCancel.TabIndex = 10;
@@ -171,7 +173,7 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(82, 184);
+            this.btnAddNew.Location = new System.Drawing.Point(93, 184);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(106, 23);
             this.btnAddNew.TabIndex = 11;
@@ -193,17 +195,18 @@ namespace Authors_Table_Input_Form_Project
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(333, 183);
+            this.btnDone.Location = new System.Drawing.Point(317, 184);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(106, 23);
             this.btnDone.TabIndex = 13;
             this.btnDone.TabStop = false;
             this.btnDone.Text = "Do&ne";
             this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(333, 212);
+            this.btnHelp.Location = new System.Drawing.Point(317, 213);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(106, 23);
             this.btnHelp.TabIndex = 14;
@@ -211,11 +214,33 @@ namespace Authors_Table_Input_Form_Project
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // btnLast
+            // 
+            this.btnLast.Location = new System.Drawing.Point(365, 125);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(93, 23);
+            this.btnLast.TabIndex = 15;
+            this.btnLast.Text = "Last >|";
+            this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.Location = new System.Drawing.Point(68, 125);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(93, 23);
+            this.btnFirst.TabIndex = 16;
+            this.btnFirst.Text = "|< First";
+            this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
             // frmAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 244);
+            this.Controls.Add(this.btnFirst);
+            this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnDelete);
@@ -237,6 +262,7 @@ namespace Authors_Table_Input_Form_Project
             this.hlpAuthors.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authors";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAuthors_FormClosing);
             this.Load += new System.EventHandler(this.frmAuthors_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,6 +288,8 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.HelpProvider hlpAuthors;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnLast;
+        private System.Windows.Forms.Button btnFirst;
     }
 }
 
